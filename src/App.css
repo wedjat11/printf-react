@@ -1,0 +1,14 @@
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.App {
+  text-align: center;
+}
+.bg-black{
+  background-color: black;
+}
+@media all and (max-width: 480px) { 
+  footer{
+   display: none;
+  }
+}
