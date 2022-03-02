@@ -1,3 +1,4 @@
+import { computeHeadingLevel } from '@testing-library/react';
 import React, { useEffect, useState } from 'react'
 import oplogo from  '../assets/img/opgg.png';
 import './Table.css';
@@ -138,7 +139,7 @@ export const Table = () => {
         setwr2(formato(wr2));
 
          /*Humber7o*/ 
-        const url3=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/RSkFpRAuBvBtKdGsT1JwHUDRQicowAVoFUX15W4GjgY1fQ?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
+        const url3=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/2EB7T-o5K0JtNnGt7YIWljPZ18Nhblz5uxny4yCvfmjH?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
         const resp3 = await fetch (url3);
         const data3 = await resp3.json(); 
         const wins3 = data3[0].wins;
@@ -154,14 +155,15 @@ export const Table = () => {
         setwr3(formato(wr3));
 
         /*Señor quesito*/ 
-        const url4=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/RSkFpRAuBvBtKdGsT1JwHUDRQicowAVoFUX15W4GjgY1fQ?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
+        const url4=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/PYpsJqj_IYSNMi1R5lJ1KenVVeVyjALS-AcSiFCmyNV4tw?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
         const resp4 = await fetch (url4);
         const data4 = await resp4.json(); 
         const wins4 = data4[0].wins;
         const loss4 = data4[0].losses;
         const elo4 = data4[0].tier+' '+data4[0].rank;
         const lp4 = data4[0].leaguePoints
-        const wr4 = (wins4)/(wins4+loss4);   
+        const wr4 = (wins4)/(wins4+loss4);  
+        console.log(data4)
         
         setWins4(wins4);
         setLosss4(loss4);
@@ -169,8 +171,8 @@ export const Table = () => {
         setLp4(lp4);
         setwr4(formato(wr4));
 
-        /*Fiesta Duck*/ 
-        const url5=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/RSkFpRAuBvBtKdGsT1JwHUDRQicowAVoFUX15W4GjgY1fQ?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
+        /*Fiesta Duck  flex ranked*/ 
+        const url5=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/z0ywA2G7jI8EIPB8Yjd0dnytq3JdY3yteFBKEjiUVwvp7w?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
         const resp5 = await fetch (url5);
         const data5 = await resp5.json(); 
         const wins5 = data5[0].wins;
@@ -186,7 +188,7 @@ export const Table = () => {
         setwr5(formato(wr5));
 
         /*SNG Manolos*/ 
-        const url6=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/RSkFpRAuBvBtKdGsT1JwHUDRQicowAVoFUX15W4GjgY1fQ?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
+        const url6=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/qwZZib0TKsTEo1NC-W2iHzzcy3DBqQ5dqMc22MnkpBA?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
         const resp6 = await fetch (url6);
         const data6 = await resp6.json(); 
         const wins6 = data6[0].wins;
@@ -202,7 +204,7 @@ export const Table = () => {
         setwr6(formato(wr6));
 
         /*SNG Ruben*/ 
-        const url7=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/RSkFpRAuBvBtKdGsT1JwHUDRQicowAVoFUX15W4GjgY1fQ?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
+        const url7=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/8XK6z--GgD6LHUOrsgHYVV1TEC760Hsqltvr3NHetyw?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
         const resp7 = await fetch (url7);
         const data7 = await resp7.json(); 
         const wins7 = data7[0].wins;
@@ -218,7 +220,7 @@ export const Table = () => {
         setwr7(formato(wr7));
 
         /*SNG GBirou667*/ 
-        const url8=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/RSkFpRAuBvBtKdGsT1JwHUDRQicowAVoFUX15W4GjgY1fQ?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
+        const url8=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/vQ0W0csRteUGr3HGX8NKkzGT0liEzr0NUvW0a9UBBGU?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
         const resp8 = await fetch (url8);
         const data8 = await resp8.json(); 
         const wins8 = data8[0].wins;
@@ -234,7 +236,7 @@ export const Table = () => {
         setwr8(formato(wr8));
 
         /*SNG Cross*/ 
-        const url9=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/RSkFpRAuBvBtKdGsT1JwHUDRQicowAVoFUX15W4GjgY1fQ?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
+        const url9=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/SmagZIUUekf7w3OKPtDQpp-2NPvHrDQ7wsJWxie4o_DMESw?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
         const resp9 = await fetch (url9);
         const data9 = await resp9.json(); 
         const wins9 = data9[0].wins;
@@ -250,13 +252,13 @@ export const Table = () => {
         setwr9(formato(wr9));
 
         /*PepsiBoy*/ 
-        const url10=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/RSkFpRAuBvBtKdGsT1JwHUDRQicowAVoFUX15W4GjgY1fQ?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
+        const url10=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/bHt7yZkvfVf8wJNoO_xHY_lQ8REGY1mApFaTxiL0H9MZXQ?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
         const resp10 = await fetch (url10);
         const data10 = await resp10.json(); 
-        const wins10 = data10[0].wins;
-        const loss10 = data10[0].losses;
-        const elo10 = data10[0].tier+' '+data10[0].rank;
-        const lp10 = data10[0].leaguePoints
+        const wins10 = data10[2].wins;
+        const loss10 = data10[2].losses;
+        const elo10 = data10[2].tier+' '+data10[2].rank;
+        const lp10 = data10[2].leaguePoints
         const wr10 = (wins10)/(wins10+loss10);   
         
         setWins10(wins10);
@@ -305,11 +307,11 @@ export const Table = () => {
                     <tr>
                         <th scope="row">1</th>
                         <td>Khino94</td>
-                        <td>{wins}</td>
-                        <td>{loss}</td>
-                        <td>{wr}</td>
-                        <td>{elo}</td>
-                        <td>{lp}</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
                         <td>Sus dos peores lineas</td>
                         <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
@@ -338,22 +340,22 @@ export const Table = () => {
                     <tr>
                         <th scope="row">4</th>
                         <td>Humber7o</td>
-                        <td>{wins}</td>
-                        <td>{loss}</td>
-                        <td>{wr}</td>
-                        <td>{elo}</td>
-                        <td>{lp}</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
                         <td>Only main</td>
                         <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">5</th>
                         <td>Señor Quesito</td>
-                        <td>{wins}</td>
-                        <td>{loss}</td>
-                        <td>{wr}</td>
-                        <td>{elo}</td>
-                        <td>{lp}</td>
+                        <td>{wins4}</td>
+                        <td>{loss4}</td>
+                        <td>{wr4}</td>
+                        <td>{elo4}</td>
+                        <td>{lp4}</td>
                         <td>Only main</td>
                         <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
@@ -371,61 +373,66 @@ export const Table = () => {
                     <tr>
                         <th scope="row">7</th>
                         <td>Fiesta Duck</td>
-                        <td>{wins}</td>
-                        <td>{loss}</td>
-                        <td>{wr}</td>
-                        <td>{elo}</td>
-                        <td>{lp}</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
                         <td>Sus dos peores lineas</td>
                         <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">8</th>
-                        <td>SNG Manolos</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>Oro 4</td>
-                        <td>28</td>
+                        <td>SNG Manolos</td> 
+                        <td>{wins6}</td>
+                        <td>{loss6}</td>
+                        <td>{wr6}</td>
+                        <td>{elo6}</td>
+                        <td>{lp6}</td>
                         <td>Sus dos peores lineas</td>
                         <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">9</th>
                         <td>SNG Ruben</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>Oro 4</td>
-                        <td>28</td>
+                        <td>{wins7}</td>
+                        <td>{loss7}</td>
+                        <td>{wr7}</td>
+                        <td>{elo7}</td>
+                        <td>{lp7}</td>
                         <td>Sus dos peores lineas</td>
                         <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">10</th>
                         <td>SNG GBirou667</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>Oro 4</td>
-                        <td>28</td>
+                        <td>{wins8}</td>
+                        <td>{loss8}</td>
+                        <td>{wr8}</td>
+                        <td>{elo8}</td>
+                        <td>{lp8}</td>
                         <td>Sus dos peores lineas</td>
                         <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">11</th>
                         <td>SNG Cross</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>Oro 4</td>
-                        <td>28</td>
+                        <td>{wins9}</td>
+                        <td>{loss9}</td>
+                        <td>{wr9}</td>
+                        <td>{elo9}</td>
+                        <td>{lp9}</td>
                         <td>Sus dos peores lineas</td>
                         <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">12</th>
                         <td>PepsiBoy</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>Oro 4</td>
-                        <td>28</td>
+                        <td>{wins10}</td>
+                        <td>{loss10}</td>
+                        <td>{wr10}</td>
+                        <td>{elo10}</td>
+                        <td>{lp10}</td>
                         <td>Autofill</td>
                         <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
