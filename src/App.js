@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route } from "react-router-dom"; 
+import { Routes, Route, BrowserRouter } from "react-router-dom"; 
 
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
@@ -12,7 +12,7 @@ import { Faqs } from './paginas/Faqs';
 function App() {
   return (
     <>
-    
+    <BrowserRouter>
       <Navbar></Navbar>
       <main className='mx-auto'>
         <Routes>
@@ -23,6 +23,7 @@ function App() {
       </main>
         
       <Footer></Footer>
+    </BrowserRouter>
       
     </>
   );
