@@ -1,4 +1,3 @@
-import { computeHeadingLevel } from '@testing-library/react';
 import React, { useEffect, useState } from 'react'
 import oplogo from  '../assets/img/opgg.png';
 import './Table.css';
