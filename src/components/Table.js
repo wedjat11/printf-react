@@ -30,11 +30,11 @@ export const Table = () => {
     const [lp2, setLp2]= useState();
     const [wr2, setwr2]= useState();
 
-    const [wins3, setWins3]= useState();
-    const [loss3, setLosss3]= useState();
-    const [elo3, setElo3]= useState();
-    const [lp3, setLp3]= useState();
-    const [wr3, setwr3]= useState();
+    // const [wins3, setWins3]= useState();
+    // const [loss3, setLosss3]= useState();
+    // const [elo3, setElo3]= useState();
+    // const [lp3, setLp3]= useState();
+    // const [wr3, setwr3]= useState();
 
     const [wins4, setWins4]= useState();
     const [loss4, setLosss4]= useState();
@@ -78,11 +78,11 @@ export const Table = () => {
     const [lp10, setLp10]= useState();
     const [wr10, setwr10]= useState();
 
-    const [wins11, setWins11]= useState();
-    const [loss11, setLosss11]= useState();
-    const [elo11, setElo11]= useState();
-    const [lp11, setLp11]= useState();
-    const [wr11, setwr11]= useState();
+    // const [wins11, setWins11]= useState();
+    // const [loss11, setLosss11]= useState();
+    // const [elo11, setElo11]= useState();
+    // const [lp11, setLp11]= useState();
+    // const [wr11, setwr11]= useState();
 
     useEffect(() => {
         Apiriot();
@@ -114,7 +114,7 @@ export const Table = () => {
         const elo1 = data1[0].tier+' '+data1[0].rank;
         const lp1 = data1[0].leaguePoints
         const wr1 = (wins1)/(wins1+loss1);  
-        console.log(data1);   
+   
         
         setWins1(wins1);
         setLosss1(loss1);
@@ -138,21 +138,21 @@ export const Table = () => {
         setLp2(lp2);
         setwr2(formato(wr2));
 
-         /*Humber7o*/ 
-        const url3=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/2EB7T-o5K0JtNnGt7YIWljPZ18Nhblz5uxny4yCvfmjH?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
-        const resp3 = await fetch (url3);
-        const data3 = await resp3.json(); 
-        const wins3 = data3[0].wins;
-        const loss3 = data3[0].losses;
-        const elo3 = data3[0].tier+' '+data3[0].rank;
-        const lp3 = data3[0].leaguePoints
-        const wr3 = (wins3)/(wins3+loss3);   
+        //  /*Humber7o*/ 
+        // // const url3=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/2EB7T-o5K0JtNnGt7YIWljPZ18Nhblz5uxny4yCvfmjH?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
+        // // const resp3 = await fetch (url3);
+        // // const data3 = await resp3.json(); 
+        // // const wins3 = data3[0].wins;
+        // // const loss3 = data3[0].losses;
+        // // const elo3 = data3[0].tier+' '+data3[0].rank;
+        // // const lp3 = data3[0].leaguePoints
+        // // const wr3 = (wins3)/(wins3+loss3);   
          
-        setWins3(wins3);
-        setLosss3(loss3);
-        setElo3(elo3);
-        setLp3(lp3);
-        setwr3(formato(wr3));
+        // setWins3(wins3);
+        // setLosss3(loss3);
+        // setElo3(elo3);
+        // setLp3(lp3);
+        // setwr3(formato(wr3));
 
         /*Señor quesito*/ 
         const url4=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/PYpsJqj_IYSNMi1R5lJ1KenVVeVyjALS-AcSiFCmyNV4tw?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
@@ -223,10 +223,10 @@ export const Table = () => {
         const url8=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/vQ0W0csRteUGr3HGX8NKkzGT0liEzr0NUvW0a9UBBGU?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
         const resp8 = await fetch (url8);
         const data8 = await resp8.json(); 
-        const wins8 = data8[0].wins;
-        const loss8 = data8[0].losses;
-        const elo8 = data8[0].tier+' '+data8[0].rank;
-        const lp8 = data8[0].leaguePoints
+        const wins8 = data8[1].wins;
+        const loss8 = data8[1].losses;
+        const elo8 = data8[1].tier+' '+data8[1].rank;
+        const lp8 = data8[1].leaguePoints
         const wr8 = (wins8)/(wins8+loss8);   
         
         setWins8(wins8);
@@ -255,10 +255,10 @@ export const Table = () => {
         const url10=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/bHt7yZkvfVf8wJNoO_xHY_lQ8REGY1mApFaTxiL0H9MZXQ?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
         const resp10 = await fetch (url10);
         const data10 = await resp10.json(); 
-        const wins10 = data10[2].wins;
-        const loss10 = data10[2].losses;
-        const elo10 = data10[2].tier+' '+data10[2].rank;
-        const lp10 = data10[2].leaguePoints
+        const wins10 = data10[1].wins;
+        const loss10 = data10[1].losses;
+        const elo10 = data10[1].tier+' '+data10[1].rank;
+        const lp10 = data10[1].leaguePoints
         const wr10 = (wins10)/(wins10+loss10);   
         
         setWins10(wins10);
@@ -268,20 +268,20 @@ export const Table = () => {
         setwr10(formato(wr10));
 
         /*Khino*/ 
-        const url11=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/RSkFpRAuBvBtKdGsT1JwHUDRQicowAVoFUX15W4GjgY1fQ?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
-        const resp11 = await fetch (url11);
-        const data11 = await resp11.json(); 
-        const wins11 = data11[0].wins;
-        const loss11 = data11[0].losses;
-        const elo11 = data11[0].tier+' '+data11[0].rank;
-        const lp11 = data11[0].leaguePoints
-        const wr11 = (wins11)/(wins11+loss11);   
+        // const url11=`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/RSkFpRAuBvBtKdGsT1JwHUDRQicowAVoFUX15W4GjgY1fQ?api_key=RGAPI-475ed488-b72a-4e35-8603-049c5439fcb1`;
+        // const resp11 = await fetch (url11);
+        // const data11 = await resp11.json(); 
+        // const wins11 = data11[0].wins;
+        // const loss11 = data11[0].losses;
+        // const elo11 = data11[0].tier+' '+data11[0].rank;
+        // const lp11 = data11[0].leaguePoints
+        // const wr11 = (wins11)/(wins11+loss11);   
         
-        setWins11(wins11);
-        setLosss11(loss11);
-        setElo11(elo11);
-        setLp11(lp11);
-        setwr11(formato(wr11));
+        // setWins11(wins11);
+        // setLosss11(loss11);
+        // setElo11(elo11);
+        // setLp11(lp11);
+        // setwr11(formato(wr11));
     }
 
 
@@ -313,7 +313,7 @@ export const Table = () => {
                         <td>0</td>
                         <td>0</td>
                         <td>Sus dos peores lineas</td>
-                        <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
+                        <td><a href='https://lan.op.gg/summoner/userName=Khino94' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
@@ -324,7 +324,7 @@ export const Table = () => {
                         <td>{elo1}</td>
                         <td>{lp1}</td>
                         <td>Sus dos peores lineas</td>
-                        <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
+                        <td><a href='https://lan.op.gg/summoner/userName=Luisinked' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
@@ -346,7 +346,7 @@ export const Table = () => {
                         <td>0</td>
                         <td>0</td>
                         <td>Only main</td>
-                        <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
+                        <td><a href='https://lan.op.gg/summoner/userName=Humber7o' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">5</th>
@@ -357,7 +357,7 @@ export const Table = () => {
                         <td>{elo4}</td>
                         <td>{lp4}</td>
                         <td>Only main</td>
-                        <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
+                        <td><a href='https://lan.op.gg/summoner/userName=SeñorQuesito' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">6</th>
@@ -368,7 +368,7 @@ export const Table = () => {
                         <td>{elo2}</td>
                         <td>{lp2}</td>
                         <td>Only main</td>
-                        <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
+                        <td><a href='https://lan.op.gg/summoner/userName=ThothMon' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">7</th>
@@ -379,7 +379,7 @@ export const Table = () => {
                         <td>0</td>
                         <td>0</td>
                         <td>Sus dos peores lineas</td>
-                        <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
+                        <td><a href='https://lan.op.gg/summoner/userName=FiestaDuck' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">8</th>
@@ -390,7 +390,7 @@ export const Table = () => {
                         <td>{elo6}</td>
                         <td>{lp6}</td>
                         <td>Sus dos peores lineas</td>
-                        <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
+                        <td><a href='https://lan.op.gg/summoner/userName=SNGManolos' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">9</th>
@@ -401,7 +401,7 @@ export const Table = () => {
                         <td>{elo7}</td>
                         <td>{lp7}</td>
                         <td>Sus dos peores lineas</td>
-                        <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
+                        <td><a href='https://lan.op.gg/summoner/userName=SNGRuben' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">10</th>
@@ -412,7 +412,7 @@ export const Table = () => {
                         <td>{elo8}</td>
                         <td>{lp8}</td>
                         <td>Sus dos peores lineas</td>
-                        <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
+                        <td><a href='https://lan.op.gg/summoner/userName=SNGGBirou667' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">11</th>
@@ -423,7 +423,7 @@ export const Table = () => {
                         <td>{elo9}</td>
                         <td>{lp9}</td>
                         <td>Sus dos peores lineas</td>
-                        <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
+                        <td><a href='https://lan.op.gg/summoner/userName=SNGCross' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                     <tr>
                         <th scope="row">12</th>
@@ -434,7 +434,7 @@ export const Table = () => {
                         <td>{elo10}</td>
                         <td>{lp10}</td>
                         <td>Autofill</td>
-                        <td><a href='https://lan.op.gg/summoner/userName=dante621' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
+                        <td><a href='https://lan.op.gg/summoner/userName=PepsiBoy' rel="noopener noreferrer" target='_blank'><img src={oplogo} alt='OP.gg' className='img-fluid oplogo'/></a></td>
                     </tr>
                 </tbody>
             </table>
